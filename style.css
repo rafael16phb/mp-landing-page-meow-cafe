@@ -28,6 +28,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  color: var(--main-heading-color);
 }
 
 header {
@@ -105,4 +106,23 @@ header {
   top: 0;
   right: -1.5rem;
   z-index: -1;
+}
+
+.first-section {
+  width: var(--main-width);
+  margin: auto;
+}
+.first-section h2 {
+  font-size: var(--text-md);
+}
+
+.first-section h1 {
+  font-size: var(--text-3xl);
+  line-height: 1;
+}
+.first-section-text {
+  width: 30%;
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
 }
