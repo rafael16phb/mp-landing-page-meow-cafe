@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-bg-color: #f7f2e8;
+  --main-text-color-900: #000000;
+  --main-text-color-800: #1a1a1a;
+  --main-text-color-700: #222222;
+  --main-text-color-600: #282828;
+  --main-heading-color: #3c0e0e;
+  --main-brand-color-600: #431b1b;
+  --main-brand-color-hover: #733535;
+  --main-brand-color-500: #4d1d1d;
+  --main-width: 80%;
+  --pink-400: #eb8e8e;
+  --pink-200: #f9c4c4;
+  --text-sm: 0.875rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
+  --text-2xl: 2.5rem;
+  --text-3xl: 5rem;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--main-width);
+  margin: auto;
+}
+
+#header-menu {
+  display: flex;
+  align-items: center;
+}
+
+#header-menu h2 {
+  margin-right: 1.6rem;
+  font-size: var(--text-lg);
+}
+
+#header-menu nav {
+  display: flex;
+  gap: 1.6rem;
+}
+
+#header-menu nav a {
+  color: var(--main-heading-color);
+  text-decoration: none;
+  font-size: var(--text-md);
+  position: relative;
+  transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+}
+
+#header-menu nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  height: 0.3rem;
+  width: 100%;
+  background-color: var(--main-heading-color);
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: color 0.1s, transform 0.2s ease-out;
+}
+#header-menu nav a:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.button-secondary {
+  color: var(--main-heading-color);
+  font-size: var(--text-md);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-primary {
+  color: white;
+  background-color: var(--main-brand-color-600);
+  font-size: var(--text-md);
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 2.5rem;
+}
+
+#buttons-header {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-image {
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  z-index: -1;
+}
